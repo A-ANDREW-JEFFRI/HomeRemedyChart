@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeRemedyChat.ai</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <style>
+        /* Add your style rules here or link an external CSS file */
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <p class="website_title"> <span>H</span>ome <span>R</span>emedy<span>C</span>hat.ai</p>
+    </nav>
+    <!-- BODY OF THE PAGE -->
+    <div class="small_box">
+        <div class="small_box_content" >
+            <div class="image">
+                <img  src="{{ url_for('static', filename='IMAGES/img1.jpg') }}" alt="image">
+            </div>
+            <div class="content">
+                <h2>About :</h2>
+                <p>
+                   Welcome to HomeRemedyChat.We are a dedicated team of health enthusiasts who believe in the power of natural remedies for everyday ailments.Our website is designed to provide 
+                    to provide you with reliable and evidence-based home remedies for various diseases and health conditions.We also leverage the power of ChatGPT, our AI-powered assistant, to provide personalized recommendations.. We are dedicated to bringing you the best possible information on home remedies for diseases, ranging from common ailments like colds, coughs, and headaches to more complex conditions like allergies, indigestion, and skin issues.
+                We invite you to explore our website and discover the power of natural remedies for diseases. Let's embark on a journey towards better health, together!
+            </p>
+            </div>
+        </div>
+        <div class="small small_box_text1">
+            <form class="form" action="/" method="post">
+                <!-- <center> -->
+                    <label class="label_one" for="disease_name">Enter the disease name :</label>
+                    <input id="disease_name" type="text" name="disease_name" required>
+                <!-- </center> -->
+                <input  class="btn" type="submit" value=  "GET REMEDY">
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="small_box_text"> -->
+        <div class="small_box_text" >
+        {% if remedy %}
+            <div class="remedy-box"
+                <center> <h2 class="remedy2">Home Remedy:</h2></center>
+                <div class="remedy-content">
+                    {% for point in remedy.split('.') %}
+                        <h4 class="remedy1">{{ point }}</h4>
+                    {% endfor %}
+                </div>
+            
+                <button>
+                    <a class="btn1" href="http://127.0.0.1:5000/">⬅pre </a>
+                </button>
+            </div> 
+        {% endif %}
+    </div>
+<script src="../static/JAVASCRIPT/index.js"></script>
+</body>
+</html>

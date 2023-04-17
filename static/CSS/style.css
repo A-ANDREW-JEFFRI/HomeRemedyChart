@@ -1,0 +1,238 @@
+/* UNIVERSAL SELECTOR */
+*{
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* HTML TAG */
+html{
+    scroll-behavior: smooth;
+}
+
+/* WEBKIT  */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* BODY TAG  */
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg,#d8f6f0,#b3d5f1,#fad1f5 60%,#8fe5ed) ;  
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    border-bottom: 3px solid white;
+    border-radius: 40%;
+    border-color:white;
+}
+.nav_function a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+}
+.nav_function a:hover{
+    color: rgb(227, 110, 110);
+}
+.website_title{
+    margin-left: 40px;
+    margin-top: -5px;
+}
+span{
+    font-size: 40px;
+    color: rgb(227, 110, 110);
+}
+
+/* BODY OF THE PAGE  */
+.small_box{
+    justify-content: space-evenly;
+    width: 95%;
+    height: 450px;
+    margin: 50px;
+    background: linear-gradient(45deg,#d8f6f0,#b3d5f1,#fad1f5 60%,#8fe5ed) ;
+    border: 3px solid white;
+    border-radius: 50px;
+    border-color: white;
+    border-style:inset;
+    display: flex;
+    
+}
+.small_box_content img{
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    float: right !important; 
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.small_box_content .content{ 
+    margin-left: 30px;
+    padding-top: 40px;
+    width: 400px;
+    height: 400px;
+}
+.small_box_content{
+    width: 100%;
+    max-width: 550px;
+    height: 450px;
+    border-right :1.5px dashed  rgb(106, 104, 104) !important;
+}
+
+.remedy-box {
+    border: 1px solid;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Update to center the remedy-box div horizontally */
+    display: flex;
+    flex-direction: column;
+  }
+.small_box_text{
+    width: 600px;
+    height: 350px !important;
+    overflow-y: scroll  ;
+    position: absolute !important;
+    margin-left: 640px;
+    margin-top: -470px;
+    backdrop-filter: blur(100px);
+    display: inline;
+}
+.small_box_text1{
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    z-index: 1;
+}
+form {
+    width: 350px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.label_one{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input{
+    width: 310px;
+    height: 30px;
+
+}
+button{
+    background: transparent;
+    background-color: rgba(225,225,225/31%);
+    border-color: bisque;
+    font-size: 22px;
+    width: 140px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border-top: 1px soild BLACK;
+    opacity:  0.8  ;
+    box-shadow: 5px 5px 5px gray;
+    margin-left: 30px;
+    margin-top: 20px;
+} 
+button:hover{
+    background-color:white;
+    box-shadow: 5px 5px 5px gray;
+    opacity: 0.4;
+}
+.btn1{
+    text-decoration: none;
+    color: black;
+    padding: 4px 40px 4px 40px;
+}
+.btn1:hover{
+    color: red;
+}
+.btn{
+    background: transparent;
+    background-color: rgba(225,225,225/31%);
+    border-color: bisque;
+    font-size: 22px;
+    width: 170px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border-top: 1px soild BLACK;
+    opacity:  0.8  ;
+    box-shadow: 5px 5px 5px gray;
+}
+.btn:hover{
+    color: red;
+    background-color:white;
+    box-shadow: 5px 5px 5px gray;
+    opacity: 0.4;
+}
+
+
+/* Responsive adjustments for form */
+@media only screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav_function {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    .website_title {
+        margin-top: 0;
+    }
+
+    /* Small Box Content */
+    .small_box_content {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .small_box_content .content {
+        margin-left: 0;
+        padding-top: 30px;
+        width: 100%;
+    }
+    .small_box_content img {
+        float: none !important;
+        margin: 0 auto;
+        margin-top: -50px;
+    }
+
+    /* Remedy Box and Small Box Text */
+    .remedy-box, .small_box_text1 {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Form */
+    form {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        top: auto;
+        right: auto;
+        transform: none;
+    }
+}
